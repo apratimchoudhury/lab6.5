@@ -30,14 +30,29 @@ int option_3(int sales)
     return op3;
 }
 
+//driver function
 int main()
 {
     int sales;
     takeInput(sales);
-    cout<<option_1()<<endl;
-    cout<<option_2(sales)<<endl;
-    cout<<option_3(sales)<<endl;
+    int x=option_1();
+    int y=option_2(sales);
+    int z=option_3(sales);
+    cout<<"The total income through first option is: "<<option_1()<<endl;
+    cout<<"The total income through second option is: "<<option_2(sales)<<endl;
+    cout<<"The total income through third option is: "<<option_3(sales)<<endl;
+    if(x>y&&x>z)
+    {
+        cout<<"Hence, option 1 is the best!!"<<endl;
+    }
+    else if(y>x&&y>z)
+    {
+        cout<<"Hence, option 2 is the best!!"<<endl;
+    }
+    else
+        cout<<"Hence, option 3 is the best!!"<<endl;
     return 0;
 }
+
 
 
